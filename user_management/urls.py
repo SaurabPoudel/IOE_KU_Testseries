@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
 from users.views import CustomLoginView, ResetPasswordView, ChangePasswordView
-from users.views  import dashboard,testseries,mocktest,kumocktest,customermessage
+from users.views  import dashboard,testseries,mocktest,kumocktest,customermessage,ioeentrancesyllabus,kuentrancesyllabus
 from users.forms import LoginForm
 
 urlpatterns = [
@@ -38,4 +38,6 @@ urlpatterns = [
     path('mocktest/',mocktest ,name='mocktest'),
     path('kumocktest/',kumocktest ,name='kumocktest'),
     path('customermessage/',customermessage ,name='customermessage'),
+    path('ioeentrancesyllabus/',ioeentrancesyllabus ,name='ioeentrancesyllabus'),
+    path('kuentrancesyllabus/',kuentrancesyllabus ,name='kuentrancesyllabus'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

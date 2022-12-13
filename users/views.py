@@ -12,7 +12,11 @@ from .forms import RegisterForm, LoginForm, UpdateUserForm, UpdateProfileForm
 def home(request):
     return render(request, 'users/home.html')
 
+def ioeentrancesyllabus(request):
+    return render(request,'users/ioeentrancesyllabus.html')
 
+def kuentrancesyllabus(request):
+    return render(request,'users/kuentrancesyllabus.html')
 
 class RegisterView(View):
     form_class = RegisterForm
